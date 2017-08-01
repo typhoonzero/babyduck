@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
+set(CMAKE_CXX_STANDARD 11)
 
 # Download eigen dependency
 INCLUDE(ExternalProject)
@@ -37,4 +38,4 @@ LIST(APPEND external_project_dependencies eigen3)
 add_executable(just_a_test ${CMAKE_SOURCE_DIR}/example/test_eigen.cc)
 add_dependencies(just_a_test extern_eigen3)
 
-#include(c)
+add_subdirectory(c)
